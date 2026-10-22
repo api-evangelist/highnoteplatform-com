@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@vocab": "https://highnoteplatform.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "highnoteplatform": "https://highnoteplatform.com/schema#",
+    "PostGraphqlRequest": "highnoteplatform:PostGraphqlRequest",
+    "query": {
+      "@id": "highnoteplatform:query",
+      "@type": "xsd:string"
+    },
+    "PostGraphqlResponse": "highnoteplatform:PostGraphqlResponse",
+    "data": {
+      "@id": "highnoteplatform:data"
+    },
+    "extensions": {
+      "@id": "highnoteplatform:extensions"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Highnote API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Highnote's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-22) from openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml.",
+  "dcterms:created": "2026-10-22",
+  "dcterms:source": [
+    "openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml"
+  ]
+}

@@ -1,0 +1,36 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.highnote.com/docs/tags/webhooks
+sources:
+- https://docs.highnote.com/docs/tags/webhooks
+- https://docs.highnote.com/docs/get-started/dashboard/organizations/manage-notifications
+- https://docs.highnote.com/docs/get-started/dashboard/organizations/monitor-events
+- https://docs.highnote.com/docs/developers/events/events-reference
+description: Highnote delivers notifications via webhooks to a target URL you configure in the dashboard.
+events:
+- event: ORIGINATED_ACH_TRANSFER_INITIATED
+  description: Object ACH transfer initiated.
+- event: ORIGINATED_ACH_TRANSFER_PENDING
+  description: Object ACH transfer is pending.
+- event: ORIGINATED_ACH_TRANSFER_PROCESSING
+  description: Object ACH transfer sent to the external financial institution.
+- event: ORIGINATED_ACH_TRANSFER_PROCESSED
+  description: Object ACH transfer processed and reflected on the financial account.
+- event: ORIGINATED_ACH_TRANSFER_FAILED
+  description: Object ACH transfer failed.
+- event: ORIGINATED_ACH_TRANSFER_RETURNED
+  description: Object Return received from the external financial institution.
+- event: ORIGINATED_ACH_TRANSFER_CANCELED
+  description: Object ACH transfer canceled.
+- event: NON_ORIGINATED_ACH_TRANSFER_RECEIVED
+  description: Object ACH transfer received from an external financial institution.
+- event: NON_ORIGINATED_ACH_TRANSFER_PROCESSED
+  description: Object ACH transfer processed.
+- event: NON_ORIGINATED_ACH_TRANSFER_FAILED
+  description: Object ACH transfer failed.
+- event: NON_ORIGINATED_ACH_TRANSFER_RETURNED
+  description: Object ACH transfer returned.
+delivery: {}
+note: The documentation does not specify how webhook deliveries are secured (e.g., signature header or authentication) nor the retry policy.
+docs: https://docs.highnote.com/docs/tags/webhooks

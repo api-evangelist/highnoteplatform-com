@@ -1,0 +1,16 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.highnote.com/docs/developers/api/rotating-keys
+sources:
+- https://docs.highnote.com/docs/developers/api/rotating-keys
+- https://docs.highnote.com/docs/developers/sdks/client-tokens
+- https://docs.highnote.com/docs/issuing/cards/simulations/sim-digital-wallet-tokens
+- https://docs.highnote.com/docs/issuing/flexible-credential/about-flex-creds
+schemes:
+- type: http-bearer
+  name: Bearer
+  evidence: Set your authorization header.
+  location: header
+  header: Authorization
+docs: https://docs.highnote.com/docs/developers/api/rotating-keys

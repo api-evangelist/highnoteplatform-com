@@ -1,0 +1,114 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 3
+  other_domain: 5
+  platform: 0
+  roles:
+  - api
+  - docs
+  - marketing
+  - status
+  - support
+  - website
+hosts:
+- host: api.highnote.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: highnote.com
+  role: api
+  relation: other-domain
+- host: api.highnoteplatform.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: highnoteplatform.com
+  role: api
+  relation: own
+- host: api.us.test.highnoteplatform.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: highnoteplatform.com
+  role: api
+  relation: own
+- host: docs.highnote.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - ChangeLog
+  - APIReference
+  - GettingStarted
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: highnote.com
+  role: docs
+  relation: other-domain
+- host: highnote.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Pricing
+  - Newsroom
+  - Blog
+  serves: []
+  registrable_domain: highnote.com
+  role: marketing
+  relation: other-domain
+- host: highnoteplatform.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: highnoteplatform.com
+  role: website
+  relation: own
+- host: status.highnote.com
+  found_by:
+  - pointer
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: highnote.com
+  role: status
+  relation: other-domain
+- host: support.highnote.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: highnote.com
+  role: support
+  relation: other-domain

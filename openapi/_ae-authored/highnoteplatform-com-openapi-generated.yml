@@ -1,0 +1,95 @@
+openapi: 3.1.0
+info:
+  title: Highnote API
+  version: '2026-10-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-22: 2 operation(s) read from 3 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Highnote has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 0
+    pages-with-code: 3
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.highnote.com/docs/developers/api/using-the-api
+  - https://docs.highnote.com/docs/developers/api/intro-to-graphql
+  - https://docs.highnote.com/docs/developers/sdks/client-tokens
+servers:
+- url: https://api.us.test.highnoteplatform.com
+paths:
+  /graphql:
+    get:
+      operationId: get_graphql
+      tags:
+      - Graphql
+      summary: GET /graphql
+      x-source: https://docs.highnote.com/docs/developers/api/using-the-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl command as follows: https://api.us.test.highnote.com/graphql | jq -C '.' \n References: \n For info on the requestId ,\
+          \ see Troubleshooting with request ID . \n For info on responses and formats, see the GraphQL spec . \n Tags: API GraphQL Previous Intro\
+          \ to GraphQL Next Entity IDs and Object Types Before you start Headers Content type Authorization Request body Operation name Variables\
+          \ Multiple re"
+    post:
+      operationId: post_graphql
+      tags:
+      - Graphql
+      summary: POST /graphql
+      x-source: https://docs.highnote.com/docs/developers/api/using-the-api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostGraphqlRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostGraphqlResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST \\ --header 'Content-Type: application/json' \\ --header 'Authorization: Basic YOUR_BASE64_ENCODED_API_KEY'\
+          \ \\ --data '{\"query\":\"query {ping}\"}' \\ https://api.us.test.highnote.com/graphql \n A slash \\ represents a newline. Also, options\
+          \ can be represented in single-dash format (which you may see throughout the Highnote docs): "
+components:
+  schemas:
+    PostGraphqlRequest:
+      type: object
+      properties:
+        query:
+          type: string
+    PostGraphqlResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            ping:
+              type: string
+        extensions:
+          type: object
+          properties:
+            requestId:
+              type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+security:
+- basic: []
+tags:
+- name: Graphql

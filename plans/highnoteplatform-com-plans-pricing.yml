@@ -1,0 +1,22 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://highnote.com/pricing
+sources:
+- https://highnote.com/pricing
+- https://docs.highnote.com/docs/issuing/credit/revolving/credit-plans-bnpl
+- https://docs.highnote.com/docs/issuing/credit/revolving/credit-plans-standard-purchase
+- https://docs.highnote.com/docs/acquiring/pricing/merchant-pricing
+name: Highnote pricing
+audience: business-product
+pricing_basis: per-call
+plans:
+- name: Issuing Standard
+  price_text: 2.85% + .25¢
+- name: Acquiring Standard
+  price_text: 2.85% + .25¢
+- name: Issuing Custom
+  price_text: Contact Sales
+- name: Acquiring Custom
+  price_text: Contact Sales
+docs: https://highnote.com/pricing

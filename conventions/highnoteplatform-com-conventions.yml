@@ -1,0 +1,20 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.highnote.com/docs/issuing/accounts/onboarding/application-denials
+sources:
+- https://docs.highnote.com/docs/issuing/accounts/onboarding/application-denials
+- https://docs.highnote.com/docs/issuing/accounts/onboarding/authorized-users-v1
+- https://docs.highnote.com/docs/issuing/accounts/onboarding/authorized-users
+- https://docs.highnote.com/docs/issuing/accounts/onboarding/close-an-account
+idempotency:
+  coverage: none
+  evidence: The documentation does not describe any idempotency key or header for write operations.
+pagination:
+  style: cursor
+  evidence: GraphQL connections return a pageInfo object with hasNextPage, hasPreviousPage, startCursor, endCursor, but the specific pagination
+    parameters are not documented.
+error_envelope: GraphQL errors are returned via a UserError type containing an errors array with errorPath, code, and description.
+request_tracing: Each response includes an extensions.requestId field.
+rate_limit_signaling: Responses include extensions.rateLimit with cost, limit, remaining, asOf, and nested complexity and count objects.
+docs: https://docs.highnote.com/docs/issuing/accounts/onboarding/application-denials

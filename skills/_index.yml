@@ -1,0 +1,11 @@
+generated: '2026-10-22'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml
+skills:
+- file: skills/highnoteplatform-com-graphql-execute.md
+  name: highnoteplatform-com-graphql-execute
+  api: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml
+  operations:
+  - get_graphql
+  - post_graphql

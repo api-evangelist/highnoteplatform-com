@@ -1,0 +1,35 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.highnote.com/docs/developers/api/rate-limiting
+sources:
+- https://docs.highnote.com/docs/developers/api/rate-limiting
+name: Highnote rate limits
+limits:
+- name: API key request count
+  limit_text: 200 requests per 10 seconds
+  max: 200
+  window: 10 seconds
+  scope: API key
+- name: Client token request count
+  limit_text: 20 requests per 10 seconds per user/subject
+  max: 20
+  window: 10 seconds
+  scope: Client token per user/subject
+- name: REST API request count
+  limit_text: 200 requests per 10 seconds
+  max: 200
+  window: 10 seconds
+  scope: REST API
+- name: API key complexity
+  limit_text: 5,000 complexity per 10 seconds
+  max: 5000
+  window: 10 seconds
+  scope: API key
+- name: Client token complexity
+  limit_text: 5,000 complexity per 10 seconds per user/subject
+  max: 5000
+  window: 10 seconds
+  scope: Client token per user/subject
+exhaustion_status: 429
+docs: https://docs.highnote.com/docs/developers/api/rate-limiting

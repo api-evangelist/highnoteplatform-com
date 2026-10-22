@@ -1,0 +1,25 @@
+generated: '2026-10-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml
+vocabulary:
+  name: Highnote Domain Vocabulary
+  description: 'Terms declared by Highnote''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-22'
+  terms:
+  - term: PostGraphqlRequest
+    definition: 'Object declared by the contract with fields: query.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml#/components/schemas/PostGraphqlRequest
+  - term: PostGraphqlResponse
+    definition: 'Object declared by the contract with fields: data, extensions.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml#/components/schemas/PostGraphqlResponse
+  - term: Graphql
+    definition: 'Resource group in the contract; its operation GET /graphql: GET /graphql'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml

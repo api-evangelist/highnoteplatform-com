@@ -1,25 +1,121 @@
 aid: highnoteplatform-com
+
 name: Highnote
-description: 'Highnote is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by costanoa-ventures) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://highnote.com/img/og/home-og.jpg
+
+description: Highnote provides a unified payments platform that enables companies to issue and manage card programs, accept payments, offer credit
+  products, and move money across various rails. It serves businesses that need embedded finance solutions, including issuers, merchants, platforms,
+  and vertical SaaS providers.
+
 url: https://raw.githubusercontent.com/api-evangelist/highnoteplatform-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
-- Company
-apis: []
+- Issuing
+- Acquiring
+- Credit
+- Money Movement
+- Embedded Finance
+- Spend Management
+- Fleet
+- Travel
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- costanoa-ventures
+
 common:
+- type: RateLimits
+  url: rate-limits/highnoteplatform-com-rate-limits.yml
+- type: Plans
+  url: plans/highnoteplatform-com-plans-pricing.yml
+- type: Spectral
+  url: rules/highnoteplatform-com-rules.yml
+- type: JSONLD
+  url: json-ld/highnoteplatform-com-context.jsonld
+- type: Vocabulary
+  url: vocabulary/highnoteplatform-com-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Webhooks
+  url: asyncapi/highnoteplatform-com-webhooks.yml
+- type: DataModel
+  url: data-model/highnoteplatform-com-data-model.yml
+- type: Conventions
+  url: conventions/highnoteplatform-com-conventions.yml
+- type: Authentication
+  url: authentication/highnoteplatform-com-authentication.yml
+- type: Conformance
+  url: conformance/highnoteplatform-com-conformance.yml
+- type: LLMsTxt
+  url: llms/highnoteplatform-com-llms.txt
+- type: Hosts
+  url: hosts/highnoteplatform-com-hosts.yml
+- type: Vendors
+  url: vendors/highnoteplatform-com-vendors.yml
+- type: TermsOfService
+  url: https://highnote.com/agreements/terms
+- type: Support
+  url: https://support.highnote.com
+- type: StatusPage
+  url: https://status.highnote.com
+- type: PrivacyPolicy
+  url: https://highnote.com/agreements/privacy
+- type: Pricing
+  url: https://highnote.com/pricing
+- type: Newsroom
+  url: https://highnote.com/press
+- type: ChangeLog
+  url: https://docs.highnote.com/changelog
+- type: Blog
+  url: https://highnote.com/blog
+- type: APIReference
+  url: https://docs.highnote.com/docs/api-reference/query
+- type: GettingStarted
+  url: https://docs.highnote.com/docs/issuing/accounts/onboarding/application-denials
+- type: Documentation
+  url: https://docs.highnote.com/
+- type: DomainSecurity
+  url: security/highnoteplatform-com-domain-security.yml
 - type: Website
   url: https://highnoteplatform.com
+
+apis:
+- aid: highnoteplatform-com:highnoteplatform-com-api
+  name: Highnote API
+  description: 'Highnote API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-22); not
+    the provider''s own document.'
+  humanURL: https://docs.highnote.com/docs/developers/api/using-the-api
+  baseURL: https://api.us.test.highnoteplatform.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/highnoteplatform-com-post-graphql-response-schema.json
+  - type: JSONSchema
+    url: json-schema/highnoteplatform-com-post-graphql-request-schema.json
+
+x-backed-by:
+- costanoa-ventures
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 24
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

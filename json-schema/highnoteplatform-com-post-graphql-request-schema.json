@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/highnoteplatform-com/main/json-schema/highnoteplatform-com-post-graphql-request-schema.json",
+  "title": "PostGraphqlRequest",
+  "x-generated": "2026-10-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/highnoteplatform-com-openapi-generated.yml#/components/schemas/PostGraphqlRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "type": "string"
+    }
+  }
+}
